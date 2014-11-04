@@ -23,7 +23,7 @@ Create symlinks
   mklink /H C:\opt\vim\_vimrc %USERPROFILE%\.vim\vimrc
   mklink /H C:\opt\vim\_gvimrc %USERPROFILE%\.vim\gvimrc
 
-* Switch to the `~/.vim` directory, and fetch submodules:
+Switch to the `~/.vim` directory, and fetch submodules:
 
 ::
 
