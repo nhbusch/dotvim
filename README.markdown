@@ -23,6 +23,14 @@ Create symlinks
   mklink /H C:\opt\vim\_vimrc %USERPROFILE%\.vim\vimrc
   mklink /H C:\opt\vim\_gvimrc %USERPROFILE%\.vim\gvimrc
 
+Note: if the personal runtime directory is assumed to be `vimfiles`,
+also create a symbolic link `vimfiles` pointing to `%USERPROFILE%\.vim`:
+
+::
+
+  mklink /J %USERPROFILE%\vimfiles %USERPROFILE%\.vim
+
+
 Switch to the `~/.vim` directory, and fetch submodules:
 
 ::

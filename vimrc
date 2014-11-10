@@ -57,7 +57,9 @@ endif
 
 " Plugin management {{{
 filetype off                            " required
+runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
+"execute pathogen#helptags()
 
 if has('autocmd')
   filetype plugin indent on             " required
@@ -202,7 +204,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Move {{{
 set backspace=indent,eol,start
-set smarttab
+set smarttab                            " sw at start of line, sts elsewehere
 " move to last change, similar to gi
 nnoremap gI `.                          
 " }}}
