@@ -200,13 +200,22 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " }}}
 
-" Navigation --------------------------------------------------------------{{{
+" Navigation -------------------------------------------------------------{{{
 
 " Move {{{
 set backspace=indent,eol,start
 set smarttab                            " sw at start of line, sts elsewehere
 " move to last change, similar to gi
-nnoremap gI `.                          
+nnoremap gI `.
+
+" move by screen lines instead of file lines
+noremap j gj
+noremap k gk
+noremap gj j
+noremap gk k
+
+" in command-mode, use C-a to move to beginning to match C-e
+cnoremap <C-a> <Home>
 " }}}
 
 " Cursorline {{{
@@ -227,7 +236,7 @@ nnoremap z0 zCz0
                                         
 " }}}
 
-" Highlight {{{
+z" Highlight {{{
 set hlsearch                    " enable highlight search
 if maparg('<C-L>', 'n') ==# ''  " use <C-L> to clear highlighting
   nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
@@ -253,6 +262,9 @@ set incsearch                   " enable incremental search
 " Selection {{{
 " select content of current line w/o indent 
 nnoremap vv ^vg_                
+
+" Toggle paste
+set pastetoggle=<F2>
 " }}}
 
 " Wildmenu {{{
