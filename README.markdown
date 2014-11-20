@@ -3,7 +3,7 @@ Installation
 
 Follow these steps to install vim plugins and config files:
 
-1. Clone repository
+## Clone repository
 
 ```
   git clone git://github.com/nhbusch/dotvim.git ~/.vim
@@ -11,7 +11,7 @@ Follow these steps to install vim plugins and config files:
 
 *Note*: On Windows, replace `~` with `%HOME%` or `%USERPROFILE%`.
 
-2. Create symlinks
+## Create symlinks
 
 On Unix:
 
@@ -36,7 +36,7 @@ also create a symbolic link `vimfiles` pointing to `%USERPROFILE%\.vim`:
 
 Switch to the `~/.vim` directory, and fetch submodules:
 
-3. Get plugins
+## Get plugins
 
 ```
   cd ~/.vim
