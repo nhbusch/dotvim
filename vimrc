@@ -233,10 +233,12 @@ augroup END
 " Folding {{{
 " recursively open top fold independent of cursor position
 nnoremap z0 zCz0                        
-                                        
+
+" refocus folds
+nnoremap ,z zMzvzz
 " }}}
 
-z" Highlight {{{
+" Highlight {{{
 set hlsearch                    " enable highlight search
 if maparg('<C-L>', 'n') ==# ''  " use <C-L> to clear highlighting
   nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
@@ -359,7 +361,7 @@ set laststatus=2                        " always show status line
 " gVIM {{{
 if has('gui_running')
   if has('win32') || has('win64')
-    set guifont=Consolas:h11        " switch to default fixed font on Win
+    set guifont=Consolas:h11            " switch to default fixed font on Win
   elseif has('unix')
     set guifont=Menlo \Regular:h12
   endif
